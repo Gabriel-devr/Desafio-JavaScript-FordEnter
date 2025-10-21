@@ -47,6 +47,9 @@ button {
     height: 40px;
     margin-right: 8px;
     float: right;
+    background-color: #1b357e;
+    border-radius: 8px;
+    color: white;
 }
 
 .titulo {

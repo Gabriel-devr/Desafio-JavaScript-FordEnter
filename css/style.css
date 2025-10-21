@@ -182,3 +182,8 @@ footer div {
     margin-right: 40px;
 }
 
+#compareButton, #button-finish, #submit{
+    background-color: #1b357e;
+    border-radius: 8px;
+    color: white;
+}

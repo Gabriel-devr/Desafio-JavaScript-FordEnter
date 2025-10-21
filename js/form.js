@@ -27,4 +27,5 @@ function Post(form) {
     }
 
     console.log(data)
+    form.reset()
 }
