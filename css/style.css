@@ -82,69 +82,79 @@ nav li {
 
 main {
     min-height: calc(100% - 167px);
+
 }
 
-#carousel-container {
-    position: relative;
-    /*necessário para posicionar os botões absolutamente*/
-    width: 80%;
-    max-width: 800px;
-    margin: auto;
-}
+
+
+
 
 #carousel-window {
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+    margin: 20vh auto;
     border-radius: 10px;
+    box-shadow: 0 20px 30px black;
+
 }
 
 #carousel-track {
+    position: absolute;
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    /*transicao suave*/
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;    
+    transition: all 0.5s;
+}
+
+.carousel-item:first-child {
+    margin-left: -100%;
 }
 
 .carousel-item img {
-    width: 100%;
-    display: block;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
 }
 
 .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    column-rule: #fff;
-    border: none;
-    font-size: 1.5rem;
-    padding: 5px 10px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 5px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    min-width: 100px;
 }
 
 .carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #00000069;
 }
 
 
-#prev-button {
-    left: 10px;
-}
-
-#next-button {
-    right: 10px;
-}
-
-#carousel-title {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 1.2em;
+button {
+    font-size: 20px;
     font-weight: bold;
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.material-symbols-outlined{
+    font-size: 60px;
+    color: white;
 }
 
 nav#social {
@@ -172,13 +182,3 @@ footer div {
     margin-right: 40px;
 }
 
-button:hover {
-    background: #1b357e;
-}
-
-button {
-    background: #1351d8;
-    color: #fff;
-    border: 0px;
-    border-radius: 10px;
-}
