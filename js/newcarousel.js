@@ -1,7 +1,7 @@
 const images = [
-    {'url':'img/imagem_1.jpg'},
-    {'url':'img/imagem_2.jpg'},
-    {'url':'img/imagem_3.jpg'},
+    {'url':'img/imagem_1.jpg','p':'Essa  é a nova Ranger 2022. Verifique novidades'},
+    {'url':'img/imagem_2.jpg', 'p':'Ford, a nossa historia'},
+    {'url':'img/imagem_3.jpg', 'p':'Nova ford bronco sport 2022'},
 ]
 
 const container = document.querySelector('#carousel-track')
@@ -14,6 +14,7 @@ function loadImages(images, container) {
         container.innerHTML+=`
             <div class="carousel-item">
                 <a href="lancamento.html"><img src="${image.url}" alt=""></a>
+                <p>${image.p}</p>
             </div>
         `
     });
