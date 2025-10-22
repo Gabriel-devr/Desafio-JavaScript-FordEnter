@@ -26,14 +26,12 @@ const compareTableDiv = document.querySelector('#compare');
 compareButton.addEventListener('click', handleCompareClick)
 
 function handleCompareClick() {
-    const checkedboxes = document.querySelectorAll('.checkbox:checked')//Esta linha encontra todos os checkboxes que foram marcados pelo usuário no momento em que o botão "Comparar" foi clicado.
+    const checkedboxes = document.querySelectorAll('.checkbox:checked')
     if (checkedboxes.length !== 2) {
         alert("Precisa marcar 2 carros para apresentar a comparação");
         return;
     }
 
-    //.dataset: É uma propriedade especial em JavaScript que dá acesso a todos os atributos customizados data-* de um elemento HTML.
-    //carId: É a forma como o JavaScript lê o atributo data-car-id. O JavaScript converte automaticamente o nome do atributo de kebab-case (com hífen) para camelCase (com letra maiúscula no meio).
     const carId1 = checkedboxes[0].dataset.carId;
     const carId2 = checkedboxes[1].dataset.carId;
 
@@ -72,11 +70,10 @@ function compareTable(carA, carB) {
     document.getElementById('compare_preco_1').innerText = carB.Preco;
 
     compareTableDiv.style.display = 'block';
-    //No seu HTML, a <div id="compare"> está inicialmente escondida (provavelmente com display: none; no seu CSS, ou simplesmente não visível por padrão). Ao definir o display dela para 'block', você está dizendo ao navegador: "Ok, agora mostre este elemento. Trate-o como um bloco padrão, fazendo com que ele apareça na tela e ocupe seu próprio espaço".
 }
 
 function HideCompare() {
     compareTableDiv.style.display = 'none';
-    //EXPLIQUE: porque usar o display none
+
 }
 

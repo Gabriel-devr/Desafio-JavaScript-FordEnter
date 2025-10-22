@@ -29,19 +29,16 @@
                 </li>
             </ul>
         </nav>
-
     </header>
+    
     <main>
-        <div id="carousel-container"> <!--Segura tudo e ajuda a posicionar os botões-->
-            <div id="carousel-window"> <!--A parte visível, vai "esconder" as imagens que estão fora da vista-->
-                <div class="carousel-button"><button id="prev-button" ><span class="material-symbols-outlined">
-                    chevron_left
-                    </span></button></div>
-                <div id="carousel-track"> <!--container que segura todas as imagens em uma linha-->
-                </div>
-                <div class="carousel-button"><button id="next-button" ><span class="material-symbols-outlined">
-                    chevron_right
-                    </span></button></div>
+        <div id="carousel-container">
+            <div id="carousel-window"> 
+                <div class="carousel-button"><button id="prev-button" ><span class="material-symbols-outlined">chevron_left</span></button></div>
+
+                <div id="carousel-track"> </div>
+
+                <div class="carousel-button"><button id="next-button" ><span class="material-symbols-outlined">chevron_right</span></button></div>
             </div>
         </div>
         <div id="carousel-title">
@@ -64,3 +61,8 @@
 </body>
 
 </html>
+
+array=[1,2,3,4]
+
+for i in array[::-1]
+    print(i)
